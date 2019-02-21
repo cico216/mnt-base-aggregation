@@ -1,4 +1,4 @@
-package com.mnt.base.classloader;
+package com.mnt.base.classloader.anno;
 
 /**
  * <p>

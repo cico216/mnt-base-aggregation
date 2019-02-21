@@ -27,7 +27,7 @@ import java.util.List;
  * @version 2015年5月24日 下午7:00:13 mnt.cico .
  * @since FX8.0
  */
-public class FXClassLoader {
+public class ClassCompilerHelper {
 
 	/**
 	 * 编译器

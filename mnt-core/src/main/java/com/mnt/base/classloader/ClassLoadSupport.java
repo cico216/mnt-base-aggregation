@@ -1,5 +1,6 @@
 package com.mnt.base.classloader;
 
+import com.mnt.base.classloader.anno.ClassKey;
 import javafx.util.Pair;
 
 import java.net.URLClassLoader;
@@ -94,7 +95,7 @@ public class ClassLoadSupport<T> {
 	public void loadClass(String classDirector, URLClassLoader appClassLoad)
 	{
 		this.classDirector = classDirector;
-		Pair<ClassLoader, List<String>> classLoader = FXClassLoader.loadClasses(classDirector, appClassLoad);
+		Pair<ClassLoader, List<String>> classLoader = ClassCompilerHelper.loadClasses(classDirector, appClassLoad);
 		List<String> classNames = classLoader.getValue();
 		classesMap = new HashMap<String, Class<T>>(classNames.size());
 		for (String className : classNames) {
