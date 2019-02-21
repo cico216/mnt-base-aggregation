@@ -12,6 +12,7 @@
         <module>mnt-core</module>
         <module>mnt-fx-gui</module>
         <module>mnt-algorithm</module>
+        <module>mnt-other</module>
     </modules>
 
     <properties>
