@@ -11,5 +11,12 @@
 
     <artifactId>mnt-algorithm</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.mnt.base</groupId>
+            <artifactId>mnt-core</artifactId>
+        </dependency>
+
+    </dependencies>
 
 </project>
