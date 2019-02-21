@@ -1,11 +1,9 @@
 package com.mnt.gui.fx.concurrent;
 
+import com.mnt.base.thread.ThreadPoolManager;
 import javafx.concurrent.Task;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
-import com.mnt.gui.fx.thread.ThreadPoolManager;
+import org.apache.log4j.Logger;
 
 /**
  * 
@@ -30,7 +28,7 @@ import com.mnt.gui.fx.thread.ThreadPoolManager;
  */
 public abstract class ServiceTask<V> extends Task<V>
 {
-	protected final Log log = LogFactory.getLog(getClass());;
+	protected final Logger log = Logger.getLogger(getClass());
 
 	/**
 	 * 是否立刻执行
