@@ -19,7 +19,7 @@ public class ThreadPoolConfig {
 	/**
 	 * 线程池每个核对应的额外线程大小
 	 */
-	public static int EXTRA_THREAD_PER_CORE = 4;
+	public static int EXTRA_THREAD_PER_CORE = 2;
 
 	/**
 	 * 线程池最小连接数
