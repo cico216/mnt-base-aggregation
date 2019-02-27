@@ -38,11 +38,11 @@
       </HBox>
       <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="369.0" spacing="10.0">
          <children>
-            <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#processCancel" prefHeight="26.0" prefWidth="50.0" styleClass="btnCommon" text="取消">
+            <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#processCancel" prefHeight="26.0" prefWidth="60.0" styleClass="btnCommon" text="取消">
                <HBox.margin>
                   <Insets />
                </HBox.margin></Button>
-            <Button mnemonicParsing="false" onAction="#processConfirm" prefHeight="26.0" prefWidth="50.0" styleClass="btnCommon" text="确定" />
+            <Button mnemonicParsing="false" onAction="#processConfirm" prefHeight="26.0" prefWidth="60.0" styleClass="btnCommon" text="确定" />
          </children>
          <padding>
             <Insets bottom="2.0" left="2.0" right="2.0" />
