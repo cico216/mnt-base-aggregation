@@ -7,7 +7,10 @@
     <groupId>com.github.cico216</groupId>
     <artifactId>mnt-base-aggregation</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
+    <name>mnt-base-aggregation</name>
+    <description>mnt-fx and mnt-tools</description>
+    <url>https://github.com/cico216/mnt-base-aggregation</url>
 
     <licenses>
         <license>
@@ -34,7 +37,7 @@
     </modules>
 
     <properties>
-        <mnt-version>1.0-SNAPSHOT</mnt-version>
+        <mnt-version>1.0</mnt-version>
         <log4j-version>1.2.17</log4j-version>
     </properties>
 

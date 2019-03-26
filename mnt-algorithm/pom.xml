@@ -5,12 +5,13 @@
     <parent>
         <artifactId>mnt-base-aggregation</artifactId>
         <groupId>com.github.cico216</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mnt-algorithm</artifactId>
-
+    <packaging>jar</packaging>
+    
     <dependencies>
         <dependency>
             <groupId>com.github.cico216</groupId>
