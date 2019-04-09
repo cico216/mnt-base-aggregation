@@ -13,6 +13,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>fx-pc</module>
+        <module>fx-demo</module>
+        <module>fx-updater</module>
     </modules>
 
     <dependencies>
