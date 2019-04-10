@@ -49,7 +49,7 @@ public class PropertyCloneHelper
 
 		} else
 		{
-			// TODO MestarLogger.error(" count is not equal");
+			// TODO MestarLoggerFactory.error(" count is not equal");
 		}
 	}
 

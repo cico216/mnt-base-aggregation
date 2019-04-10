@@ -1,6 +1,7 @@
 package com.mnt.base.thread;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.RejectedExecutionException;
 import java.util.concurrent.RejectedExecutionHandler;
@@ -13,7 +14,7 @@ import java.util.concurrent.ThreadPoolExecutor;
  */
 public class CommonsExecutionHandler implements RejectedExecutionHandler
 {
-	private final static Logger log = Logger.getLogger(CommonsExecutionHandler.class);
+	private final static Logger log = LoggerFactory.getLogger(CommonsExecutionHandler.class);
 	
 	@Override
 	public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) 

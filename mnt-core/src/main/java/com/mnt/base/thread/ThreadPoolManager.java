@@ -1,6 +1,7 @@
 package com.mnt.base.thread;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.concurrent.*;
  */
 public class ThreadPoolManager implements Executor
 {
-	private final static Logger log = Logger.getLogger(ThreadPoolManager.class);
+	private final static Logger log = LoggerFactory.getLogger(ThreadPoolManager.class);
 	
 	/**
 	 * 在不发出警告的情况下，最大的运行时长（ms）

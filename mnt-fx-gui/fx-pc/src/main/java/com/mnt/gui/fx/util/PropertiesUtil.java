@@ -36,7 +36,7 @@ public class PropertiesUtil
 				file.createNewFile();
 			} catch (IOException e)
 			{
-//				MestarLogger.error(e);
+//				MestarLoggerFactory.error(e);
 			}
 		} 
 		try
@@ -44,7 +44,7 @@ public class PropertiesUtil
 			properties.load(new FileInputStream(file));
 		} catch (IOException e)
 		{
-//			MestarLogger.error(e);
+//			MestarLoggerFactory.error(e);
 		} 
 	}
 	
@@ -85,7 +85,7 @@ public class PropertiesUtil
 				while(enu.hasMoreElements()){
 				    String key = (String)enu.nextElement();
 				    if(allPropertiesMap.containsKey(key)) {
-//				    	MestarLogger.error("发现重复配置文件key : key = " + key +", file = " + propertiesFile.getName());
+//				    	MestarLoggerFactory.error("发现重复配置文件key : key = " + key +", file = " + propertiesFile.getName());
 				    } else {
 				    	 allPropertiesMap.put(key, properties.getProperty(key));
 						 allPropertiesKeyAndFileMap.put(key, properties);
@@ -93,7 +93,7 @@ public class PropertiesUtil
 				} 
 			} catch (IOException e)
 			{
-//				MestarLogger.error(e);
+//				MestarLoggerFactory.error(e);
 			} finally {
 				if(null != fis) {
 					try
@@ -101,7 +101,7 @@ public class PropertiesUtil
 						fis.close();
 					} catch (IOException e)
 					{
-//						MestarLogger.error(e);
+//						MestarLoggerFactory.error(e);
 					}
 				}
 			}
@@ -136,7 +136,7 @@ public class PropertiesUtil
 				file.createNewFile();
 			} catch (IOException e)
 			{
-//				MestarLogger.error(filePath + "文件创建失败！");
+//				MestarLoggerFactory.error(filePath + "文件创建失败！");
 			}
 		}
 	}
@@ -178,7 +178,7 @@ public class PropertiesUtil
 			properties.store(outputStream, null);
 		} catch (IOException e)
 		{
-//			MestarLogger.error(e);
+//			MestarLoggerFactory.error(e);
 		} finally {
 			if(null != outputStream) {
 				try
@@ -186,7 +186,7 @@ public class PropertiesUtil
 					outputStream.close();
 				} catch (IOException e)
 				{
-//					MestarLogger.error(e);
+//					MestarLoggerFactory.error(e);
 				}
 			}
 		}

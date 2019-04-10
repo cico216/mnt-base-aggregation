@@ -3,7 +3,8 @@ package com.mnt.gui.fx.concurrent;
 import com.mnt.base.thread.ThreadPoolManager;
 import javafx.concurrent.Task;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * 
@@ -28,7 +29,7 @@ import org.apache.log4j.Logger;
  */
 public abstract class ServiceTask<V> extends Task<V>
 {
-	protected final Logger log = Logger.getLogger(getClass());
+	protected final Logger log = LoggerFactory.getLogger(getClass());
 
 	/**
 	 * 是否立刻执行
@@ -71,7 +72,7 @@ public abstract class ServiceTask<V> extends Task<V>
 	 */
 	protected void executeFailed(Throwable throwable) {
 		throwable.printStackTrace();
-		log.error(throwable);
+		log.error("execute failed", throwable);
 	}
 	
 	/**

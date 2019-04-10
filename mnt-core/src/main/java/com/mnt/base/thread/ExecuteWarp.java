@@ -2,7 +2,8 @@ package com.mnt.base.thread;
 
 
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 /**
@@ -12,7 +13,7 @@ import org.apache.log4j.Logger;
  */
 public abstract class ExecuteWarp implements Runnable 
 {
-	protected final Logger	log	= Logger.getLogger(getClass());
+	protected final Logger log	= LoggerFactory.getLogger(getClass());
 	
 	@Override
 	public void run() 

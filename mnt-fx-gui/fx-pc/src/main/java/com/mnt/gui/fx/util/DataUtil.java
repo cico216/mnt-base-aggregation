@@ -1,5 +1,7 @@
 package com.mnt.gui.fx.util;
 
+import com.mnt.gui.fx.init.InitFactory;
+
 /**
  * 
  * <p>
@@ -12,8 +14,11 @@ package com.mnt.gui.fx.util;
 public interface DataUtil
 {
 	//class url path
-	public static final String BIN_PATH = "file:/" + System.getProperty("user.dir") + "/bin";
+	String BIN_PATH = "file:/" + System.getProperty("user.dir") + "/bin";
 	
 	// app jar path
-	public static final String APP_PATH = "file:/" + System.getProperty("user.dir") + "/app";
+	String APP_PATH = "file:/" + System.getProperty("user.dir") + "/app";
+
+	//target
+	String TARGET_PATH = "file:/" + InitFactory.class.getClassLoader().getResource("").getPath();
 }

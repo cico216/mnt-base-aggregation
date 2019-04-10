@@ -9,8 +9,9 @@ import java.util.function.Consumer;
 
 import com.mnt.base.classloader.ClassLoadUtil;
 import com.mnt.base.thread.ThreadPoolManager;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+import com.mnt.gui.fx.init.InitFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.mnt.gui.fx.base.Base3DController;
 import com.mnt.gui.fx.base.Base3DLauncher;
@@ -31,7 +32,7 @@ import com.mnt.gui.fx.view.anno.MainView;
  * @since FX8.0
  */
 public class MNTFX3DLauncher extends Base3DLauncher {
-	private static final Logger log = Logger.getLogger(MNTFX3DLauncher.class);
+	private static final Logger log = LoggerFactory.getLogger(MNTFX3DLauncher.class);
 	//初始化容器
 	protected InitContext initContext;
 	//主界面
@@ -42,18 +43,11 @@ public class MNTFX3DLauncher extends Base3DLauncher {
 	public URLClassLoader classLoad;
 
 	public void loadSource() {
-		PropertyConfigurator.configure(System.getProperty("user.dir") + "/conf/log4j.properties");
+//		PropertyConfigurator.configure(System.getProperty("user.dir") + "/conf/log4j.properties");
 		
 		ThreadPoolManager.getInstance();
 		log.info("start load class or jar");
-		URL urlBin = null;
-		URL urlApp = null;
-		try {
-			urlBin = new URL(DataUtil.BIN_PATH);
-			urlApp = new URL(DataUtil.APP_PATH);
-		} catch (MalformedURLException e) {
-			log.error("url path is error [" + DataUtil.BIN_PATH + "] ["+ DataUtil.APP_PATH + "]", e);
-		}
+		URL[] loadURLs = InitFactory.getLoadClassOrJarUrl();
 		final List<Class<?>> scanClass = new ArrayList<>();
 
 		this.classLoad = ClassLoadUtil.loadJarOrClass(new Consumer<Class<?>>() {
@@ -81,7 +75,7 @@ public class MNTFX3DLauncher extends Base3DLauncher {
 					}
 				}
 			}
-		}, urlBin, urlApp);
+		}, loadURLs);
 		if (this.initContext != null) {
 			this.initContext.init(scanClass, classLoad);
 		}
