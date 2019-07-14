@@ -10,6 +10,7 @@
         <module name="fx-pc" />
         <module name="fx-updater" />
         <module name="mnt-algorithm" />
+        <module name="mnt-ali-oss" />
         <module name="mnt-core" />
         <module name="mnt-other" />
       </profile>
@@ -24,8 +25,10 @@
       <module name="fx-pc" options="-bootclasspath &quot;C:\Program Files\Java\jdk1.8.0_171/jre/lib/rt.jar&quot;" />
       <module name="fx-updater" options="-bootclasspath &quot;C:\Program Files\Java\jdk1.8.0_171/jre/lib/rt.jar&quot;" />
       <module name="mnt-algorithm" options="-bootclasspath &quot;C:\Program Files\Java\jdk1.8.0_171/jre/lib/rt.jar&quot;" />
+      <module name="mnt-ali-oss" options="-bootclasspath &quot;C:\Program Files\Java\jdk1.8.0_171/jre/lib/rt.jar&quot;" />
       <module name="mnt-core" options="-bootclasspath &quot;C:\Program Files\Java\jdk1.8.0_171/jre/lib/rt.jar&quot;" />
       <module name="mnt-other" options="-bootclasspath &quot;C:\Program Files\Java\jdk1.8.0_171/jre/lib/rt.jar&quot;" />
+      <module name="mnt-third-party" options="" />
     </option>
   </component>
 </project>

@@ -8,5 +8,7 @@
     <file url="file://$PROJECT_DIR$/mnt-fx-gui/fx-demo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mnt-fx-gui/fx-pc" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mnt-fx-gui/fx-updater" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mnt-third-party" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mnt-third-party/mnt-ali-oss" charset="UTF-8" />
   </component>
 </project>
