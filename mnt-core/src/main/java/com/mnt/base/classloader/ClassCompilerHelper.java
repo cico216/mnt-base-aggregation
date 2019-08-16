@@ -82,7 +82,7 @@ public class ClassCompilerHelper {
 			}
 		}
 //		System.err.println("jarPath = " + jarPath);
-		 List<String> options = Arrays.asList(new String[] { "-encoding", "UTF-8", "-classpath", jarPath});
+		 List<String> options = Arrays.asList(new String[] { "-encoding", "UTF-8", "-classpath", System.getProperty("java.class.path")});
 		 CompilationTask compilationTask = javac.getTask(null, manager, null, options, null, it);  
 		 
 		 compilationTask.call();
