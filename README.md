@@ -1,0 +1,1 @@
+mnt-base-aggregation 是个人积累的javafx桌面应用框架，包括动态编译，和开发常用的工具类。
