@@ -12,7 +12,6 @@
         <module name="mnt-algorithm" />
         <module name="mnt-ali-oss" />
         <module name="mnt-core" />
-        <module name="mnt-other" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
