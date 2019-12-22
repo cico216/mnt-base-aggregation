@@ -49,6 +49,10 @@ public class MNTFXLauncher extends BaseLauncher {
 		ThreadPoolManager.getInstance();
 		log.info("start load class or jar");
 		URL[] loadURLs = InitFactory.getLoadClassOrJarUrl();
+
+		for (URL url : loadURLs) {
+			log.info("load url" + url.toString());
+		}
 		final List<Class<?>> scanClass = new ArrayList<>();
 
 		this.classLoad = ClassLoadUtil.loadJarOrClass(new Consumer<Class<?>>() {

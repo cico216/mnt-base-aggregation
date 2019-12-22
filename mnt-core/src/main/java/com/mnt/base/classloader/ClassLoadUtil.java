@@ -2,6 +2,8 @@ package com.mnt.base.classloader;
 
 import com.mnt.base.classloader.anno.ClassLoad;
 import jdk.internal.org.objectweb.asm.ClassReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import sun.misc.ClassLoaderUtil;
 
 import java.io.File;
@@ -20,7 +22,7 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
 public class ClassLoadUtil {
-	
+	private static final Logger log = LoggerFactory.getLogger(ClassLoadUtil.class);
 	private static final ReentrantLock lock = new ReentrantLock();
 
 	@SuppressWarnings("rawtypes")
@@ -62,6 +64,10 @@ public class ClassLoadUtil {
 		lock.lock();
 		try {
 			classLoad = new URLClassLoader(parseUrls(urls));
+			for (URL url :parseUrls(urls)) {
+				log.info("load url" + url.toString());
+			}
+
 			for (URL url : urls) {
 				if (isClass(url)) {
 					parseClassFileName(classList, url);
@@ -74,6 +80,7 @@ public class ClassLoadUtil {
 		} finally {
 			lock.unlock();
 		}
+//		log.info("load classList" + classList);
 		for (String className : classList) {
 			try {
 				Class<?> clazz = classLoad.loadClass(className);

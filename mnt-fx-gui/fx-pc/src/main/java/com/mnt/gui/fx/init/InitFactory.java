@@ -30,6 +30,9 @@ public class InitFactory {
         } catch (MalformedURLException e) {
             log.error("url path is error [" + DataUtil.BIN_PATH + "] ["+ DataUtil.APP_PATH + "] ["+ DataUtil.TARGET_PATH + "]", e);
         }
+        if(!urlTarget.toString().contains("target/classes")) {
+            return new URL[]{urlApp, urlBin};
+        }
 
         return new URL[]{urlApp, urlBin, urlTarget};
     }
