@@ -7,7 +7,7 @@
     <groupId>com.github.cico216</groupId>
     <artifactId>mnt-base-aggregation</artifactId>
     <packaging>pom</packaging>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
     <name>mnt-base-aggregation</name>
     <description>mnt-fx and mnt-tools</description>
     <url>https://github.com/cico216/mnt-base-aggregation</url>
