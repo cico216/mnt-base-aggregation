@@ -7,4 +7,10 @@ import com.mnt.gui.fx.view.anno.MainView;
 public class TestController extends BaseController {
 
 
+    @Override
+    public void init() {
+        super.init();
+
+        // init execute
+    }
 }
