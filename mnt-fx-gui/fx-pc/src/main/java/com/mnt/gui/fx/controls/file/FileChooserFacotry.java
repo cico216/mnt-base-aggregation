@@ -115,7 +115,7 @@ public final class FileChooserFacotry {
 	 * get save file 
 	 * 2014-7-22 mnt.cico
 	 * @param stage
-	 * @param defaultPath
+	 * @param suffix 文件后缀列表
 	 * @return
 	 */
 	public static File saveFileInDirector(Stage stage, String type, String... suffix) {

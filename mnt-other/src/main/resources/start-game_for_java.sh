@@ -54,7 +54,7 @@ start_game(){
 	 game_pid=$( /bin/ps auxef | grep -v grep| grep -v "checkPid test"|grep "./gameserver.jar"   |  sed 's#OLDPWD=/##g' | grep $real_path | awk '{print $2}'  )
 	 
         if [ $game_pid ];then
-    		echo  -e  "\e[31m  目录 $real_path 已有一个游戏引擎进程在运行了!  \e[0m"
+    		echo  -e  "\e[31m  目录 $real_path 已有一个进程在运行了!  \e[0m"
 
 			#echo -en "是否需要关闭？[y/n]"
 			#read answer

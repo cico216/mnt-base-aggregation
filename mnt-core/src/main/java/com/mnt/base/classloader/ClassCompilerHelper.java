@@ -82,6 +82,7 @@ public class ClassCompilerHelper {
 			}
 		}
 //		System.err.println("jarPath = " + jarPath);
+		//修改为替换系统获取的路径
 		 List<String> options = Arrays.asList(new String[] { "-encoding", "UTF-8", "-classpath", System.getProperty("java.class.path")});
 		 CompilationTask compilationTask = javac.getTask(null, manager, null, options, null, it);  
 		 

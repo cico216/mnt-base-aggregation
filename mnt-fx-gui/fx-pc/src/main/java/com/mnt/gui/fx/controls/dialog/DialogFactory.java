@@ -122,7 +122,6 @@ public class DialogFactory {
 	 * 显示成功消息
 	 * </p>
 	 * @create mnt.cico
-	 * @param type
 	 * @param title
 	 * @param info
 	 */
@@ -136,7 +135,6 @@ public class DialogFactory {
 	 * 显示成功消息
 	 * </p>
 	 * @create mnt.cico
-	 * @param type
 	 * @param title
 	 * @param info
 	 */
@@ -150,7 +148,6 @@ public class DialogFactory {
 	 * 显示成功消息
 	 * </p>
 	 * @create mnt.cico
-	 * @param type
 	 * @param title
 	 * @param info
 	 */
@@ -164,7 +161,6 @@ public class DialogFactory {
 	 * 显示成功消息
 	 * </p>
 	 * @create mnt.cico
-	 * @param type
 	 * @param title
 	 * @param info
 	 */
