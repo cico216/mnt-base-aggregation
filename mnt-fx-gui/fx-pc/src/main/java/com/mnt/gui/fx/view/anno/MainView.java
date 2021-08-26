@@ -23,13 +23,13 @@ import java.lang.annotation.Target;
 public @interface MainView {
 
 	//应用名称
-	public String appName();
+	String appName();
 	
 	//是否为主界面启动
-	public String iconName() default "";
+	String iconName() default "";
 	
 	//子界面排序
-	public String order() default "";
+	String order() default "";
 	
 	
 }
