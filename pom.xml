@@ -24,7 +24,8 @@
             <email>cico216@163.com</email>
         </developer>
     </developers>
-    <scm>
+    <scm>00
+        o9二g2t个
         <connection>scm:git:https://github.com/cico216/mnt-base-aggregation.git</connection>
         <developerConnection>scm:git:https://github.com/cico216/mnt-base-aggregation.git</developerConnection>
         <url>https://github.com/cico216/mnt-base-aggregation.git</url>
@@ -35,12 +36,16 @@
         <module>mnt-fx-gui</module>
         <module>mnt-algorithm</module>
         <module>mnt-third-party</module>
+        <module>mnt-web</module>
     </modules>
 
     <properties>
-        <mnt.version>1.1.1</mnt.version>
+        <mnt.version>1.1.2</mnt.version>
         <slf4j.version>1.7.25</slf4j.version>
         <logback.version>1.2.3</logback.version>
+        <mybatis.version>3.5.2</mybatis.version>
+        <fastjson.version>1.2.59</fastjson.version>
+        <spring.version>5.1.9.RELEASE</spring.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <locales>en_US</locales>
@@ -96,6 +101,32 @@
                 <artifactId>logback-core</artifactId>
                 <version>${logback.version}</version>
             </dependency>
+
+            <!-- mybatis -->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+
+            <!-- fast json -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

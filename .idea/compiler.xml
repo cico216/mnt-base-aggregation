@@ -12,6 +12,7 @@
         <module name="mnt-algorithm" />
         <module name="mnt-ali-oss" />
         <module name="mnt-core" />
+        <module name="mnt-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -28,6 +29,7 @@
       <module name="mnt-core" options="-bootclasspath &quot;C:\Program Files\Java\jdk1.8.0_171/jre/lib/rt.jar&quot;" />
       <module name="mnt-other" options="-bootclasspath &quot;C:\Program Files\Java\jdk1.8.0_171/jre/lib/rt.jar&quot;" />
       <module name="mnt-third-party" options="" />
+      <module name="mnt-web" options="-bootclasspath &quot;C:\Program Files\Java\jdk1.8.0_171/jre/lib/rt.jar&quot;" />
     </option>
   </component>
 </project>
