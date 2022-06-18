@@ -3,29 +3,25 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>mnt-base-aggregation</artifactId>
+        <artifactId>mnt-fx-gui</artifactId>
         <groupId>com.github.cico216</groupId>
         <version>1.1.2</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>mnt-fx-gui</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>fx-pc</module>
-        <module>fx-demo</module>
-        <module>fx-updater</module>
-        <module>fx-protos-tool</module>
-        <module>fx-tool-common</module>
-    </modules>
+    <artifactId>fx-tool-common</artifactId>
 
     <dependencies>
+
         <dependency>
-            <groupId>com.github.cico216</groupId>
-            <artifactId>mnt-core</artifactId>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
         </dependency>
 
     </dependencies>
-
 
 </project>
