@@ -23,8 +23,29 @@ public class StringUtils {
 	{
 		return (str == null || EMPTY_STR.equals(str));
 	}
-	
-	
+
+
+	public static int length(final CharSequence cs) {
+		return cs == null ? 0 : cs.length();
+	}
+
+	public static boolean isNotBlank(final CharSequence cs) {
+		return !isBlank(cs);
+	}
+
+	public static boolean isBlank(final CharSequence cs) {
+		final int strLen = length(cs);
+		if (strLen == 0) {
+			return true;
+		}
+		for (int i = 0; i < strLen; i++) {
+			if (!Character.isWhitespace(cs.charAt(i))) {
+				return false;
+			}
+		}
+		return true;
+	}
+
 	/**
 	 * 将当前String 对象 按照指定的分割符然后转换为集合 (仅支持基础类型)
 	 * @param str
@@ -216,6 +237,38 @@ public class StringUtils {
 		}catch (Exception e){
 			return "";
 		}
+	}
+
+	/**
+	 * 获得源字符串的一个子字符串
+	 *
+	 * @param str
+	 *            ：源字符串
+	 * @param beginIndex
+	 *            ：开始索引（包括）
+	 * @param endIndex
+	 *            ：结束索引（不包括）
+	 * @return
+	 */
+	public static String substring(String str, int beginIndex, int endIndex) {
+		if (isEmpty(str)) {
+			return str;
+		}
+
+		int length = str.length();
+
+		if (beginIndex >= length || endIndex <= 0 || beginIndex >= endIndex) {
+			return null;
+		}
+
+		if (beginIndex < 0) {
+			beginIndex = 0;
+		}
+		if (endIndex > length) {
+			endIndex = length;
+		}
+
+		return str.substring(beginIndex, endIndex);
 	}
 
 

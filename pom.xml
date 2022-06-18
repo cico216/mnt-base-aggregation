@@ -24,8 +24,7 @@
             <email>cico216@163.com</email>
         </developer>
     </developers>
-    <scm>00
-        o9二g2t个
+    <scm>
         <connection>scm:git:https://github.com/cico216/mnt-base-aggregation.git</connection>
         <developerConnection>scm:git:https://github.com/cico216/mnt-base-aggregation.git</developerConnection>
         <url>https://github.com/cico216/mnt-base-aggregation.git</url>

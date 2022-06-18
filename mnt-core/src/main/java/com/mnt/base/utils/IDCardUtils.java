@@ -46,54 +46,54 @@ public class IDCardUtils {
 		return 0;
 	}
 
-//	/**
-//	 * dengzaiqiang
-//	 * 解析身份证性别
-//	 *
-//	 * @param idCard
-//	 * @return
-//	 */
-//	public static String parseIdCardSex(String idCard) {
-//		if (StringUtils.isNotBlank(idCard)) {
-//			idCard = idCard.trim();
-//			if (15 == StringUtils.length(idCard)) {
-//				idCard = IdCar15to18(idCard);
-//			}
-//			if (18 == StringUtils.length(idCard)) {
-//				int num = Integer.parseInt(StringUtils.substring(idCard, 16, 17));
-//				if (num % 2 == 0) {
-//					return "女";
-//				} else {
-//					return "男";
-//				}
-//			}
-//		}
-//		return "";
-//	}
+	/**
+	 * dengzaiqiang
+	 * 解析身份证性别
+	 *
+	 * @param idCard
+	 * @return
+	 */
+	public static String parseIdCardSex(String idCard) {
+		if (StringUtils.isNotBlank(idCard)) {
+			idCard = idCard.trim();
+			if (15 == StringUtils.length(idCard)) {
+				idCard = IdCar15to18(idCard);
+			}
+			if (18 == StringUtils.length(idCard)) {
+				int num = Integer.parseInt(StringUtils.substring(idCard, 16, 17));
+				if (num % 2 == 0) {
+					return "女";
+				} else {
+					return "男";
+				}
+			}
+		}
+		return "";
+	}
 
-//	/**
-//	 * dengzaiqiang
-//	 * 解析身份证出生日期
-//	 *
-//	 * @return yyyy-MM-dd
-//	 */
-//	public static String parseIdCardBirthDate(String idCard) {
-//		if (StringUtils.isNotBlank(idCard)) {
-//			idCard = idCard.trim();
-//			if (15 == StringUtils.length(idCard)) {
-//				idCard = IdCar15to18(idCard);
-//			}
-//			if (18 == StringUtils.length(idCard)) {
-//				String year = StringUtils.substring(idCard, 6, 10);
-//				String month = StringUtils.substring(idCard, 10, 12);
-//				String day = StringUtils.substring(idCard, 12, 14);
-//				StringBuilder result = new StringBuilder();
-//				result.append(year).append("-").append(month).append("-").append(day);
-//				return result.toString();
-//			}
-//		}
-//		return "";
-//	}
+	/**
+	 * dengzaiqiang
+	 * 解析身份证出生日期
+	 *
+	 * @return yyyy-MM-dd
+	 */
+	public static String parseIdCardBirthDate(String idCard) {
+		if (StringUtils.isNotBlank(idCard)) {
+			idCard = idCard.trim();
+			if (15 == StringUtils.length(idCard)) {
+				idCard = IdCar15to18(idCard);
+			}
+			if (18 == StringUtils.length(idCard)) {
+				String year = StringUtils.substring(idCard, 6, 10);
+				String month = StringUtils.substring(idCard, 10, 12);
+				String day = StringUtils.substring(idCard, 12, 14);
+				StringBuilder result = new StringBuilder();
+				result.append(year).append("-").append(month).append("-").append(day);
+				return result.toString();
+			}
+		}
+		return "";
+	}
 	
 	/**
 	 * 将15位身份证号转换为18位
