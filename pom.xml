@@ -46,6 +46,7 @@
         <fastjson.version>1.2.59</fastjson.version>
         <spring.version>5.1.9.RELEASE</spring.version>
         <velocity.version>1.7</velocity.version>
+        <lombok.version>1.18.22</lombok.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <locales>en_US</locales>
@@ -65,6 +66,11 @@
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -120,6 +126,14 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
+            </dependency>
+
+            <!-- lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
             </dependency>
 
             <dependency>
