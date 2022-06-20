@@ -22,6 +22,16 @@
             <artifactId>fastjson</artifactId>
         </dependency>
 
+        <!-- dom4j -->
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>jaxen</groupId>
+            <artifactId>jaxen</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>
