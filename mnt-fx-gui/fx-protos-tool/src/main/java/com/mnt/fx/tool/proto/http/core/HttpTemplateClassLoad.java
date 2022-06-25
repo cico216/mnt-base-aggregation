@@ -3,6 +3,9 @@ package com.mnt.fx.tool.proto.http.core;
 //import com.mnt.game.tool.http.generate.CsHttpClientProtoGenerate;
 //import com.mnt.game.tool.http.generate.JavaHttpServerGenerate;
 
+import com.mnt.fx.tool.proto.http.generate.CsHttpClientProtoGenerate;
+import com.mnt.fx.tool.proto.http.generate.JavaHttpServerGenerate;
+
 import java.net.URLClassLoader;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,8 +27,8 @@ public class HttpTemplateClassLoad {
 	public static List<HttpProtoCodeGenerateTemplate> PROTO_CODE_GENERATE_TEMPLATE = new ArrayList<>();;
 	private static final Map<String, HttpProtoCodeGenerateTemplate> httpProtoCodeGenerates = new HashMap<>(2);
 	static {
-//		httpProtoCodeGenerates.put("java", new JavaHttpServerGenerate());
-//		httpProtoCodeGenerates.put("cs", new CsHttpClientProtoGenerate());
+		httpProtoCodeGenerates.put("java", new JavaHttpServerGenerate());
+		httpProtoCodeGenerates.put("cs", new CsHttpClientProtoGenerate());
 	}
 
 
