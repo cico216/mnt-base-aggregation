@@ -26,11 +26,14 @@ public class InitFactory {
         try {
             urlBin = new URL(DataUtil.BIN_PATH);
             urlApp = new URL(DataUtil.APP_PATH);
-            urlTarget = new URL(DataUtil.TARGET_PATH);
+            if(DataUtil.TARGET_PATH != null) {
+                urlTarget = new URL(DataUtil.TARGET_PATH);
+            }
+
         } catch (MalformedURLException e) {
             log.error("url path is error [" + DataUtil.BIN_PATH + "] ["+ DataUtil.APP_PATH + "] ["+ DataUtil.TARGET_PATH + "]", e);
         }
-        if(!urlTarget.toString().contains("target/classes")) {
+        if(null != urlTarget && !urlTarget.toString().contains("target/classes")) {
             return new URL[]{urlApp, urlBin};
         }
 
