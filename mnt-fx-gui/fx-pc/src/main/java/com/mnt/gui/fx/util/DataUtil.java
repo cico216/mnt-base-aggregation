@@ -19,7 +19,4 @@ public interface DataUtil
 	// app jar path
 	String APP_PATH = "file:/" + System.getProperty("user.dir") + "/app";
 
-	//target
-	String TARGET_PATH = "file:/" + InitFactory.class.getClassLoader().getResource("") == null ?
-		null : InitFactory.class.getClassLoader().getResource("").getPath();
 }

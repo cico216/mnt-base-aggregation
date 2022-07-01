@@ -23,20 +23,29 @@ public class InitFactory {
         URL urlBin = null;
         URL urlApp = null;
         URL urlTarget = null;
+        String mvnTargetPath = null;
+
         try {
             urlBin = new URL(DataUtil.BIN_PATH);
             urlApp = new URL(DataUtil.APP_PATH);
-            if(DataUtil.TARGET_PATH != null) {
-                urlTarget = new URL(DataUtil.TARGET_PATH);
+
+            //target
+
+            if(InitFactory.class.getClassLoader() != null && InitFactory.class.getClassLoader().getResource("") != null) {
+                mvnTargetPath =  "file:/" +  InitFactory.class.getClassLoader().getResource("").getPath();
+            }
+
+            if(mvnTargetPath != null) {
+                urlTarget = new URL(mvnTargetPath);
             }
 
         } catch (MalformedURLException e) {
-            log.error("url path is error [" + DataUtil.BIN_PATH + "] ["+ DataUtil.APP_PATH + "] ["+ DataUtil.TARGET_PATH + "]", e);
+            log.error("url path is error [" + DataUtil.BIN_PATH + "] ["+ DataUtil.APP_PATH + "] ["+ mvnTargetPath + "]", e);
         }
         if(null != urlTarget && !urlTarget.toString().contains("target/classes")) {
-            return new URL[]{urlApp, urlBin};
+            return new URL[]{urlApp, urlBin, urlTarget};
         }
 
-        return new URL[]{urlApp, urlBin, urlTarget};
+        return new URL[]{urlApp, urlBin};
     }
 }
