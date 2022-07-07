@@ -1,6 +1,7 @@
 package com.mnt.fx.tool.proto.cmd;
 
-import com.mnt.game.tool.conf.UserData;
+
+import com.mnt.fx.tool.proto.conf.UserData;
 
 import java.io.File;
 import java.util.ArrayList;
