@@ -18,5 +18,9 @@
             <artifactId>fx-tool-common</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.github.cico216</groupId>
+            <artifactId>fx-pc</artifactId>
+        </dependency>
     </dependencies>
 </project>
