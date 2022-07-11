@@ -1,6 +1,6 @@
 package com.mnt.fx.tool.proto.ui.vo;
 
-import com.mnt.common.utils.XMLParseUtils;
+import com.mnt.fx.tool.common.utils.XMLParseUtils;
 import javafx.beans.property.SimpleStringProperty;
 
 /**

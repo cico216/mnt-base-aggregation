@@ -22,5 +22,11 @@
             <groupId>com.github.cico216</groupId>
             <artifactId>fx-pc</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+
     </dependencies>
 </project>
