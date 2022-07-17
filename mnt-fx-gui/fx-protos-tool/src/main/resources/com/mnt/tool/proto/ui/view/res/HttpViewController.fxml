@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root stylesheets="@common.css" type="VBox" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.6502086230876217" VBox.vgrow="ALWAYS">
+         <items>
+            <VBox>
+               <children>
+                  <VBox spacing="3.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <SplitPane dividerPositions="0.5" orientation="VERTICAL" VBox.vgrow="ALWAYS">
+                           <items>
+                              <VBox>
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label text="请求参数:" />
+                                          <Label text="一级路径:" />
+                                          <TextField fx:id="txtUrlPathFrist" editable="false" prefHeight="34.0" prefWidth="147.0" />
+                                          <Label text="二级路径:" />
+                                          <TextField fx:id="txtUrlPathScoend" editable="false" prefHeight="34.0" prefWidth="127.0" />
+                                          <CheckBox fx:id="cbIsBody" disable="true" mnemonicParsing="false" text="Body" />
+                                       </children>
+                                    </HBox>
+                                    <TreeTableView fx:id="treeTableRequest" prefHeight="230.0" prefWidth="498.0" showRoot="false" VBox.vgrow="ALWAYS">
+                                       <columns>
+                                          <TreeTableColumn fx:id="trclumReqName" prefWidth="75.0" text="参数名" />
+                                          <TreeTableColumn fx:id="trclumReqRemark" prefWidth="75.0" text="参数注释" />
+                                          <TreeTableColumn fx:id="trclumReqType" prefWidth="75.0" text="参数类型" />
+                                          <TreeTableColumn fx:id="trclumReqLength" prefWidth="75.0" text="参数限制" />
+                                          <TreeTableColumn fx:id="trclumReqMust" prefWidth="75.0" text="是否必传" />
+                                          <TreeTableColumn fx:id="trclumReqTest" prefWidth="75.0" text="参数样例" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TreeTableView>
+                                 </children>
+                              </VBox>
+                              <VBox>
+                                 <children>
+                                    <Label text="返回参数:" />
+                                    <TreeTableView fx:id="treeTableResponse" prefHeight="240.0" prefWidth="498.0" showRoot="false" VBox.vgrow="ALWAYS">
+                                       <columns>
+                                          <TreeTableColumn fx:id="trclumRespName" prefWidth="75.0" text="参数名" />
+                                          <TreeTableColumn fx:id="trclumRespRemark" prefWidth="75.0" text="参数注释" />
+                                          <TreeTableColumn fx:id="trclumRespType" prefWidth="75.0" text="参数类型" />
+                                          <TreeTableColumn fx:id="trclumRespTypeClass" prefWidth="75.0" text="参数子类型" />
+                                          <TreeTableColumn fx:id="trclumRespTest" prefWidth="75.0" text="参数样例" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TreeTableView>
+                                 </children>
+                              </VBox>
+                           </items>
+                        </SplitPane>
+                     </children>
+                     <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="603.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="555.0" spacing="2.0">
+                     <children>
+                        <Label styleClass="font-14" text="请求链接:" />
+                        <TextField fx:id="txtRequestUrl" styleClass="font-14" HBox.hgrow="ALWAYS" />
+                        <Button mnemonicParsing="false" onAction="#processCopyURL" styleClass="font-14" text="复制URL" />
+                     </children>
+                     <padding>
+                        <Insets left="1.0" right="1.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="465.0" spacing="5.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" spacing="5.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#processTestX" prefHeight="56.0" prefWidth="128.0" text="请求                   ">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="-80.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <TextField fx:id="txtXCount" prefHeight="29.0" prefWidth="55.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label text="次" />
+                           </children>
+                           <padding>
+                              <Insets right="3.0" />
+                           </padding>
+                        </HBox>
+                        <Button mnemonicParsing="false" onAction="#processTest100" prefHeight="54.0" prefWidth="100.0" text="请求100次">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#processTest" prefHeight="54.0" prefWidth="100.0" text="请求测试">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets right="2.0" />
+                     </padding>
+                  </HBox>
+                  <SplitPane dividerPositions="0.4" orientation="VERTICAL" VBox.vgrow="ALWAYS">
+                     <items>
+                        <VBox>
+                           <children>
+                              <Label text="请求内容:" />
+                              <TextArea fx:id="txtAreaRequest" editable="false" prefHeight="200.0" prefWidth="200.0" styleClass="font-14" wrapText="true" VBox.vgrow="ALWAYS" />
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <Label text="返回内容:" />
+                              <TextArea fx:id="txtAreaResonse" editable="false" prefHeight="200.0" prefWidth="200.0" styleClass="font-14" wrapText="true" VBox.vgrow="ALWAYS" />
+                           </children>
+                        </VBox>
+                     </items>
+                  </SplitPane>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </children>
+</fx:root>

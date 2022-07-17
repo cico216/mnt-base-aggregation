@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root stylesheets="@common.css" type="VBox" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox spacing="3.0" VBox.vgrow="ALWAYS">
+         <children>
+            <SplitPane orientation="VERTICAL" VBox.vgrow="ALWAYS">
+               <items>
+                  <VBox>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                           <children>
+                              <Label text="命令号:" />
+                              <TextField fx:id="txtCommandCode" editable="false" />
+                              <Label text="命令类型:" />
+                              <CheckBox fx:id="cbIsSend" disable="true" mnemonicParsing="false" text="发送" />
+                              <CheckBox fx:id="cbIsReceive" disable="true" mnemonicParsing="false" text="接收" />
+                           </children>
+                        </HBox>
+                        <TreeTableView fx:id="treeTableRequest" prefHeight="230.0" prefWidth="498.0" showRoot="false" VBox.vgrow="ALWAYS">
+                           <columns>
+                              <TreeTableColumn fx:id="trclumName" prefWidth="75.0" text="参数名" />
+                              <TreeTableColumn fx:id="trclumRemark" prefWidth="75.0" text="参数注释" />
+                              <TreeTableColumn fx:id="trclumType" prefWidth="75.0" text="参数类型" />
+                              <TreeTableColumn fx:id="trclumTypeClass" prefWidth="75.0" text="参数子类型" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TreeTableView>
+                     </children>
+                  </VBox>
+               </items>
+            </SplitPane>
+         </children>
+         <padding>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </padding>
+      </VBox>
+   </children>
+</fx:root>
