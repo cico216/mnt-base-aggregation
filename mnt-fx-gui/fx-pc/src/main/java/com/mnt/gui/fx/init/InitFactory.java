@@ -42,7 +42,7 @@ public class InitFactory {
         } catch (MalformedURLException e) {
             log.error("url path is error [" + DataUtil.BIN_PATH + "] ["+ DataUtil.APP_PATH + "] ["+ mvnTargetPath + "]", e);
         }
-        if(null != urlTarget && !urlTarget.toString().contains("target/classes")) {
+        if(null != urlTarget && urlTarget.toString().contains("target/classes")) {
             return new URL[]{urlApp, urlBin, urlTarget};
         }
 
