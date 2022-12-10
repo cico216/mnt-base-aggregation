@@ -44,7 +44,7 @@
         <logback.version>1.2.3</logback.version>
         <mybatis.version>3.5.2</mybatis.version>
         <fastjson.version>1.2.61</fastjson.version>
-        <spring.version>5.2.20.RELEASE</spring.version>
+        <spring.version>6.0.0</spring.version>
         <velocity.version>1.7</velocity.version>
         <lombok.version>1.18.22</lombok.version>
         <dom4j.version>1.6.1</dom4j.version>
